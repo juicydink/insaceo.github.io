@@ -1,0 +1,108 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+.body1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+::selection{
+  background: rgb(0,123,255,0.3);
+}
+.wrapper1{
+  max-width: 600px;
+  padding: 0 20px;
+}
+.wrapper1 .parent1-tab1,
+.wrapper1 .child1-tab1{
+  margin-bottom: 8px;
+  border-radius: 3px;
+  box-shadow: 0px 0px 15px rgba(0,0,0,0.18);
+}
+.wrapper1 .parent1-tab1 label,
+.wrapper1 .child1-tab1 label{
+  background: #007bff;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  border-radius: 3px;
+  position: relative;
+  z-index: 99;
+  transition: all 0.3s ease;
+}
+.wrapper1 .parent1-tab1 label:hover{
+  background: #006fe6;
+}
+.parent1-tab1 input:checked ~ label,
+.child1-tab1 input:checked ~ label{
+  border-radius: 3px 3px 0 0;
+  background: #006fe6;
+}
+.wrapper1 label span{
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  text-shadow: 0 -1px 1px #0056b3;
+}
+.wrapper1 .child1-tab1 label span{
+  font-size: 17px;
+}
+.parent1-tab1 label .icon1{
+  position: relative;
+  height: 30px;
+  width: 30px;
+  font-size: 15px;
+  color: #007bff;
+  display: block;
+  background: #fff;
+  border-radius: 50%;
+  text-shadow: 0 -1px 1px #0056b3;
+}
+.wrapper1 .child1-tab1 label .icon1{
+  height: 27px;
+  width: 27px;
+}
+.parent1-tab1 label .icon1 i{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.parent1-tab1 input:checked ~ label .icon1 i:before,
+.child1-tab1 input:checked ~ label .icon1 i:before{
+  content: '\f068';
+}
+.wrapper1 .parent1-tab1 .content1,
+.wrapper1 .child1-tab1 .sub1-content1{
+  max-height: 0px;
+  overflow: hidden;
+  background: #fff;
+  border-radius: 0 0 3px 3px;
+  transition: all 0.4s ease;
+}
+.parent1-tab1 input:checked ~ .content1,
+.child1-tab1 input:checked ~ .sub1-content1{
+  max-height: 100vh;
+}
+.tab1-31 input:checked ~ .content1{
+  padding: 15px 20px;
+}
+.parent1-tab1 .content1 p,
+.child1-tab1 .sub1-content1 p{
+  padding: 15px 20px;
+  font-size: 16px;
+}
+.child1-tab1 .sub1-content1 p{
+  font-size: 15px;
+}
+input[type="radio"],
+input[type="checkbox"]{
+  display: none;
+}
